@@ -1,0 +1,82 @@
+{
+	"info": {
+		"_postman_id": "302358fd-6bf3-4f0f-a053-a09d8808dff1",
+		"name": "todolist_postman",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/api/v1/tareas/muchas",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  { \"titulo\": \"Comprar pan\", \"descripcion\": \"Pasar por la panadería al volver a casa.\", \"completada\": false },\r\n  { \"titulo\": \"Regar las plantas\", \"descripcion\": \"Agua a las suculentas y al helecho.\", \"completada\": true },\r\n  { \"titulo\": \"Sacar la basura\", \"descripcion\": \"Bajar las bolsas al contenedor.\", \"completada\": false },\r\n  { \"titulo\": \"Cocinar cena\", \"descripcion\": \"Preparar pollo con ensalada.\", \"completada\": false },\r\n  { \"titulo\": \"Organizar escritorio\", \"descripcion\": \"Ordenar cables y botar papeles.\", \"completada\": true },\r\n  { \"titulo\": \"Revisar agenda\", \"descripcion\": \"Ver compromisos de la próxima semana.\", \"completada\": false },\r\n  { \"titulo\": \"Leer 20 páginas\", \"descripcion\": \"Continuar con el libro de arquitectura.\", \"completada\": false },\r\n  { \"titulo\": \"Actualizar LinkedIn\", \"descripcion\": \"Subir certificado del último curso.\", \"completada\": false },\r\n  { \"titulo\": \"Meditación\", \"descripcion\": \"10 minutos antes de dormir.\", \"completada\": true },\r\n  { \"titulo\": \"Llamar a mamá\", \"descripcion\": \"Saber cómo estuvo su día.\", \"completada\": false },\r\n  { \"titulo\": \"Cargar la BIP\", \"descripcion\": \"Poner saldo en la tarjeta de transporte.\", \"completada\": false },\r\n  { \"titulo\": \"Lavar el auto\", \"descripcion\": \"Limpieza completa exterior e interior.\", \"completada\": false },\r\n  { \"titulo\": \"Reparar la luz\", \"descripcion\": \"Cambiar ampolleta quemada de la cocina.\", \"completada\": true },\r\n  { \"titulo\": \"Ir al gimnasio\", \"descripcion\": \"Rutina de pesas y cardio.\", \"completada\": false },\r\n  { \"titulo\": \"Pagar cuentas\", \"descripcion\": \"Luz, agua e internet.\", \"completada\": false }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/tareas/muchas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"tareas",
+						"muchas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Las Tareas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/tareas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"tareas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener datos del clima",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/clima",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"clima"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
