@@ -6,13 +6,64 @@
 	},
 	"item": [
 		{
-			"name": "http://localhost:8080/api/v1/tareas/muchas",
+			"name": "1. Listar todas las tareas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/tareas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"tareas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2. Crear una tarea",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "[\r\n  { \"titulo\": \"Comprar pan\", \"descripcion\": \"Pasar por la panadería al volver a casa.\", \"completada\": false },\r\n  { \"titulo\": \"Regar las plantas\", \"descripcion\": \"Agua a las suculentas y al helecho.\", \"completada\": true },\r\n  { \"titulo\": \"Sacar la basura\", \"descripcion\": \"Bajar las bolsas al contenedor.\", \"completada\": false },\r\n  { \"titulo\": \"Cocinar cena\", \"descripcion\": \"Preparar pollo con ensalada.\", \"completada\": false },\r\n  { \"titulo\": \"Organizar escritorio\", \"descripcion\": \"Ordenar cables y botar papeles.\", \"completada\": true },\r\n  { \"titulo\": \"Revisar agenda\", \"descripcion\": \"Ver compromisos de la próxima semana.\", \"completada\": false },\r\n  { \"titulo\": \"Leer 20 páginas\", \"descripcion\": \"Continuar con el libro de arquitectura.\", \"completada\": false },\r\n  { \"titulo\": \"Actualizar LinkedIn\", \"descripcion\": \"Subir certificado del último curso.\", \"completada\": false },\r\n  { \"titulo\": \"Meditación\", \"descripcion\": \"10 minutos antes de dormir.\", \"completada\": true },\r\n  { \"titulo\": \"Llamar a mamá\", \"descripcion\": \"Saber cómo estuvo su día.\", \"completada\": false },\r\n  { \"titulo\": \"Cargar la BIP\", \"descripcion\": \"Poner saldo en la tarjeta de transporte.\", \"completada\": false },\r\n  { \"titulo\": \"Lavar el auto\", \"descripcion\": \"Limpieza completa exterior e interior.\", \"completada\": false },\r\n  { \"titulo\": \"Reparar la luz\", \"descripcion\": \"Cambiar ampolleta quemada de la cocina.\", \"completada\": true },\r\n  { \"titulo\": \"Ir al gimnasio\", \"descripcion\": \"Rutina de pesas y cardio.\", \"completada\": false },\r\n  { \"titulo\": \"Pagar cuentas\", \"descripcion\": \"Luz, agua e internet.\", \"completada\": false }\r\n]",
+					"raw": "{\n    \"titulo\": \"Aprobar el proyecto de Spring Boot\",\n    \"descripcion\": \"Revisar los 10 endpoints y subir los cambios a GitHub\",\n    \"completada\": false\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/tareas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"tareas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3. Crear muchas tareas (Masivo)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  { \"titulo\": \"Comprar pan\", \"descripcion\": \"Pasar por la panadería al volver a casa.\", \"completada\": false },\r\n  { \"titulo\": \"Regar las plantas\", \"descripcion\": \"Agua a las suculentas y al helecho.\", \"completada\": true },\r\n  { \"titulo\": \"Sacar la basura\", \"descripcion\": \"Bajar las bolsas al contenedor.\", \"completada\": false }\r\n]",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -37,9 +88,128 @@
 			"response": []
 		},
 		{
-			"name": "Obtener Las Tareas",
+			"name": "4. Obtener una tarea por ID",
 			"request": {
 				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/tareas/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"tareas",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5. Actualizar una tarea por ID",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"titulo\": \"Terminar el informe actualizado\",\n    \"descripcion\": \"Modificación de prueba exitosa\",\n    \"completada\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/tareas/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"tareas",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "6. Eliminar una tarea por ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/tareas/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"tareas",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "7. Listar tareas COMPLETADAS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/tareas/completadas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"tareas",
+						"completadas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "8. Listar tareas PENDIENTES",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/tareas/pendientes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"tareas",
+						"pendientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "9. Eliminar TODAS las tareas (Masivo)",
+			"request": {
+				"method": "DELETE",
 				"header": [],
 				"url": {
 					"raw": "http://localhost:8080/api/v1/tareas",
@@ -58,7 +228,7 @@
 			"response": []
 		},
 		{
-			"name": "Obtener datos del clima",
+			"name": "10. Obtener datos del clima (Open-Meteo)",
 			"request": {
 				"method": "GET",
 				"header": [],
