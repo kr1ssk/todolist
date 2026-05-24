@@ -28,7 +28,6 @@ public class TareaService {
         return tarea;
     }
 
-
     public List<TareaDTO> listarTodas() {
         return tareaRepository.findAll().stream()
                 .map(this::pasarADTO)
@@ -39,6 +38,7 @@ public class TareaService {
         Tarea tarea = pasarAEntidad(tareaDTO);
         return pasarADTO(tareaRepository.save(tarea));
     }
+
     public List<TareaDTO> guardarMuchas(List<TareaDTO> listaDTO) {
         return listaDTO.stream()
                 .map(this::guardar)
@@ -62,5 +62,25 @@ public class TareaService {
 
     public void eliminar(Integer id) {
         tareaRepository.deleteById(id);
+    }
+
+    // === NUEVOS MÉTODOS PARA COMPLETAR LOS 10 ENDPOINTS ===
+
+    public List<TareaDTO> listarCompletadas() {
+        return tareaRepository.findAll().stream()
+                .filter(Tarea::isCompletada)
+                .map(this::pasarADTO)
+                .collect(Collectors.toList());
+    }
+
+    public List<TareaDTO> listarPendientes() {
+        return tareaRepository.findAll().stream()
+                .filter(t -> !t.isCompletada())
+                .map(this::pasarADTO)
+                .collect(Collectors.toList());
+    }
+
+    public void eliminarTodas() {
+        tareaRepository.deleteAll();
     }
 }
