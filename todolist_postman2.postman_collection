@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "302358fd-6bf3-4f0f-a053-a09d8808dff1",
+		"_postman_id": "b0be642a-eafc-49d2-a598-247ff1cb3cd7",
 		"name": "todolist_postman",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -245,6 +245,22 @@
 						"clima"
 					]
 				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Usuario Admin",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Logear Usuario Admin",
+			"request": {
+				"method": "GET",
+				"header": []
 			},
 			"response": []
 		}
