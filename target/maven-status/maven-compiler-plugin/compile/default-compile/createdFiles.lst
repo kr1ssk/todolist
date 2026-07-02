@@ -13,6 +13,7 @@ com\example\ToDoList\exception\ApiError.class
 com\example\ToDoList\repository\UsuarioRepository.class
 com\example\ToDoList\dto\AuthResponse.class
 com\example\ToDoList\controller\TareaController.class
+com\example\ToDoList\config\OpenApiConfig.class
 com\example\ToDoList\dto\WeatherDTO$CurrentWeather.class
 com\example\ToDoList\model\Tarea.class
 com\example\ToDoList\model\Usuario.class
